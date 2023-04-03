@@ -24,12 +24,12 @@
                   </li>
                 </ul>
 
-                <div class="col-md-8">
+                <!-- <div class="col-md-8">
                   <form class="d-flex" role="search">
-                    <!-- <input class="form-control me-4 bg-light" type="search" placeholder="Search" aria-label="Search" v-model="searchValue" id="search-input"> -->
+                    <input class="form-control me-4 bg-light" type="search" placeholder="Search" aria-label="Search" v-model="searchValue" id="search-input">
                   </form>
                 
-                  </div>
+                  </div> -->
                   
                 <ul class="navbar-nav  me-2">
                     <li class="nav-item">
@@ -40,6 +40,8 @@
               </div>
             </div>
     </nav>
+
+
 
     <div v-if="showLessons">
             <!-- banner -->
@@ -153,7 +155,9 @@ export default {
     return {
       cart: [],
       lessons: [],
-      showLessons:true
+      showLessons:true,
+      
+      
     }
   },
   created: function(){
@@ -204,6 +208,22 @@ export default {
     cartItemCount() {
       return this.cart.length || ''
     },
+    // search() {
+    //   let lessonsArray = this.lessons.slice(0);
+
+    //   // Process search input
+    //   if (this.searchValue != '' && this.searchValue) {
+    //     lessonsArray = lessonsArray.filter((item) => {
+    //       return item.title
+    //       .toUpperCase()
+    //       .includes(this.searchValue.toUpperCase()) 
+    //       || item.location
+    //       .toUpperCase()
+    //       .includes(this.searchValue.toUpperCase())
+    //     })
+    //   }
+    //   return lessonsArray
+    // }
   }
 
 
